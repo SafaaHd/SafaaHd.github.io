@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancybox Example</title>
+    <!-- Include Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+</head>
+<body>
+
+<!-- Thumbnail image with data-src -->
+<a data-fancybox="gallery" data-src="#div-001" href="javascript:;">
+    <img src="images/portfolio/001-small.jpg" alt="Image Alt Text">
+</a>
+
+<!-- Hidden div to be displayed in the lightbox -->
+<div style="display: none;" id="div-001">
+    <h2>Content Inside the Lightbox</h2>
+    <p>This is the content you want to display when the thumbnail is clicked.</p>
+</div>
+
+<!-- Include jQuery library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Include Fancybox JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script>
+    // Initialize Fancybox
+    $(document).ready(function () {
+        $("[data-fancybox]").fancybox({
+            // Optional configuration options here
+        });
+    });
+</script>
+</body>
+</html>
